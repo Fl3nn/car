@@ -28,3 +28,24 @@ getUserInput();
 
 console.log(nunberOfCars);
 console.log(distance);
+
+class Car {
+    constructor(id){
+        this.id = id;
+        this.distance = 0;
+        this.speed = 0;
+    }
+
+    accelerate(howMuch) {
+        this.speed += howMuch;
+    }
+
+    slowDown(howMuch) {
+        this.speed -= howMuch;
+        if (this.speed < 0) this.speed = 0;
+    }
+
+    move() {
+        this.distance += this.speed;
+    }
+}
